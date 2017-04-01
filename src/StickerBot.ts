@@ -2,8 +2,8 @@ import * as fs from "fs"
 import { Telegram } from "./api/Telegram"
 import { Observable, Observer } from "rxjs/Rx"
 
-const RIKKA = "RikkaW"
-const TESTER = process.env.RIKKA_BOT_DEBUG_USER
+const AVIRAXP = "Aviraxp"
+const TESTER = process.env.AVIRAXP_BOT_DEBUG_USER
 const STAT_FILE = "./data/statistics.json"
 const SAVE_INTERVAL = 60 * 1000
 const THRESHOLD = 200
@@ -73,7 +73,7 @@ export namespace StickerBot {
     if (message.chat.id == message.from.id) {
       return // DO NOT accept private chats
     }
-    if (message.from.username === RIKKA || (TESTER != null && message.from.username === TESTER)) {
+    if (message.from.username === AVIRAXP || (TESTER != null && message.from.username === TESTER)) {
       if (message.sticker != null) {
         statistics.total++
         if (statistics.stickers[message.sticker.file_id] == null) {
